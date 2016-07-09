@@ -18,15 +18,9 @@ int main(void)
     struct pcap_pkthdr *header;
     const unsigned char *pkt_data;
 
-    char track[] = "컨설팅";
-    char name[] = "박진오";
-
     struct bpf_program fp;
     char filter_exp[] = "tcp";
     bpf_u_int32 net;
-
-    printf("[bob5][%s]pcap_test[%s]", track, name);
-    printf("\n");
 
     dev = pcap_lookupdev(errbuf);
     if (dev == NULL) {
